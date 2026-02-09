@@ -53,7 +53,7 @@ Service registry to manage and discover services in the ecosystem. All microserv
 ### API Gateway
 A singular entry point for clients to interact with the microservices. Handles routing, rate limiting, and cross-cutting concerns.
 
-**Port:** 8080
+**Port:** 8083
 
 **Features:**
 - Intelligent request routing
@@ -64,6 +64,8 @@ A singular entry point for clients to interact with the microservices. Handles r
 ### Auth Service
 Handles user authentication and JWT token issuance. Manages user registration, login, and role-based access control.
 
+**Port:** 8000
+
 **Responsibilities:**
 - User registration and login
 - JWT token generation and validation
@@ -72,6 +74,8 @@ Handles user authentication and JWT token issuance. Manages user registration, l
 
 ### Product Service
 Manages product information and inventory. Handles product CRUD operations, inventory tracking, and product search.
+
+**Port:** 8080
 
 **Responsibilities:**
 - Product CRUD operations
@@ -82,6 +86,8 @@ Manages product information and inventory. Handles product CRUD operations, inve
 ### Cart Service
 Handles shopping cart operations for users. Manages add/remove items, quantity updates, and cart persistence.
 
+**Port:** 8081
+
 **Responsibilities:**
 - Add/remove items from cart
 - Update item quantities
@@ -91,6 +97,8 @@ Handles shopping cart operations for users. Manages add/remove items, quantity u
 ### Order Service
 Manages order processing and tracking. Processes customer orders from creation to completion and publishes order events to Kafka.
 
+**Port:** 8082
+
 **Responsibilities:**
 - Order creation and processing
 - Order status tracking
@@ -99,6 +107,8 @@ Manages order processing and tracking. Processes customer orders from creation t
 
 ### Email Service
 Dispatches transactional emails to users. Consumes Kafka events and sends order confirmations, shipping notifications, and account verification emails.
+
+**Port:** 8084
 
 **Responsibilities:**
 - Order confirmation emails
@@ -127,8 +137,6 @@ Implements circuit breaker patterns for service reliability. Prevents cascading 
 Tracks request flows across services for monitoring. Provides end-to-end request tracing across all microservices, enabling performance monitoring and troubleshooting.
 
 ## 💾 Database Design
-
-![Database Schema](link-to-database-schema)
 
 Each microservice maintains its own database following the database-per-service pattern, ensuring loose coupling and independent scalability.
 
@@ -173,9 +181,9 @@ This will start all services along with their dependencies (MySQL, Redis, Kafka,
 
 Access the application via the API Gateway:
 
-- **API Gateway:** http://localhost:8080
-- **Eureka Dashboard:** http://localhost:8761
-- **Zipkin Dashboard:** http://localhost:9411
+- **API Gateway:** http://localhost:8083
+- **Eureka Dashboard:** http://localhost:8761/eureka/
+- **Zipkin Dashboard:** http://localhost:9411/api/v2/spans
 
 ### 5. Verify Service Health
 
