@@ -1,9 +1,6 @@
-# Project Title & Tagline  
-Microservices E-Commerce Backend  
-A comprehensive backend solution for E-Commerce applications using Spring Boot.
 
-# Project Overview  
-This project demonstrates a robust microservices architecture designed specifically for e-commerce applications. It features various services that ensure smooth operations and scalability.
+# Microservices E-Commerce Backend  
+A comprehensive backend solution for E-Commerce applications using Spring Boot.
 
 # Architecture Overview  
 ![Architecture Diagram](link-to-architecture-diagram)
@@ -16,7 +13,8 @@ This project demonstrates a robust microservices architecture designed specifica
 - Kafka  
 - MySQL  
 - Docker  
-- Kubernetes  
+- Zipkin
+- JWT 
 
 # Services Overview  
 - **Eureka Server**: Service registry to manage and discover services in the ecosystem.  
@@ -25,10 +23,10 @@ This project demonstrates a robust microservices architecture designed specifica
 - **Product Service**: Manages product information and inventory.  
 - **Cart Service**: Handles shopping cart operations for users.  
 - **Order Service**: Manages order processing and tracking.  
-- **Email Service**: Dispatches notifications and transactional emails to users.  
+- **Email Service**: Dispatches transactional emails to users.  
 
 # Core Features  
-- **JWT-based Authentication**: Secure API access using JSON Web Tokens.  
+- **JWT-based Authentication and Role-Based Authorization Control**: Secure API access using JSON Web Tokens and method-level security.  
 - **API Gateway with routing and Redis rate limiting**: Efficiently routes requests with rate limiting to prevent abuse.  
 - **Feign Clients and Eureka**: Simplifies communication between microservices.  
 - **Event-driven Kafka architecture**: Enables asynchronous message processing for better performance.  
@@ -44,10 +42,6 @@ This project demonstrates a robust microservices architecture designed specifica
 3. Start the services using Docker: `docker-compose up`  
 4. Access the application via the API Gateway.
 
-# Sample API / Request Flow Explanation  
-- User initiates a request through the API Gateway, which routes the request to the appropriate service.  
-- Each service interacts with the database as needed, and responses are sent back through the API Gateway.
-
 # Observability & Monitoring  
 - **Zipkin**: Integrated for tracing requests and monitoring service interactions.
 
@@ -59,8 +53,9 @@ This project showcases a fully functional microservices architecture using Sprin
 - **Prometheus**: Monitoring and alerting toolkit to help improve visibility.
 - **Grafana**: Visualization tool for monitoring metrics.
 - **Logging**: Implementation of structured logging for better debugging.
+- **Testing**: Writing unit tests using Junit and also Use Mockito for test-driven development.
 - **Additional Enhancements**: Various other improvements are identified based on feedback and evolving needs.
 
 # Author & Contact Information  
 **Author**: Laharikrkv  
-**Contact**: <your-email@example.com>  
+**Contact**: <laharik157@example.com>  
