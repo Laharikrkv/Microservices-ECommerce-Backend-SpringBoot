@@ -200,8 +200,6 @@ curl http://localhost:8761/eureka/apps
 ```http
 POST /api/auth/register - Register new user
 POST /api/auth/login - User login (returns JWT token)
-POST /api/auth/refresh - Refresh JWT token
-GET /api/auth/validate - Validate JWT token
 ```
 
 ### Product Endpoints
@@ -211,7 +209,6 @@ GET /api/products - Get all products
 GET /api/products/{id} - Get product by ID
 POST /api/products - Create new product (Admin only)
 PUT /api/products/{id} - Update product (Admin only)
-DELETE /api/products/{id} - Delete product (Admin only)
 ```
 
 ### Cart Endpoints
@@ -219,9 +216,6 @@ DELETE /api/products/{id} - Delete product (Admin only)
 ```http
 GET /api/cart - Get user's cart
 POST /api/cart/items - Add item to cart
-PUT /api/cart/items/{id} - Update cart item quantity
-DELETE /api/cart/items/{id} - Remove item from cart
-DELETE /api/cart - Clear cart
 ```
 
 ### Order Endpoints
