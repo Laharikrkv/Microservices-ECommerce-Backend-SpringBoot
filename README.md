@@ -265,7 +265,7 @@ ecommerce-microservices/
 
 **Lahari K**
 - GitHub: [@laharikrkv](https://github.com/laharikrkv)
-- LinkedIn: [LinkedIn Profile](https://linkedin.com)
+- LinkedIn: [LinkedIn Profile](www.linkedin.com/in/k-lahari-98a0043a5)
 - Email: laharik157@gmail.com
 
 ---
