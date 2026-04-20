@@ -208,7 +208,7 @@ Authorization: Bearer <your_jwt_token>
 ## 🎬 Demo
 
 <!-- Replace the link and thumbnail below with your actual demo video -->
-[![Demo Video](screenshots/demo-thumbnail.png)](https://your-demo-video-link.com)
+[![Demo Video]](https://drive.google.com/file/d/119srY5eTEvJJ00NpxgHnDScEONei3eks/view?usp=drive_link)
 
 > Click the thumbnail above to watch the full demo.
 
