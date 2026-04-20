@@ -4,6 +4,7 @@ package com.example.product_service.controller;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -84,12 +85,12 @@ public class ProductController {
     @PreAuthorize("hasAuthority('delete:products')")
     public ResponseEntity<String> deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);
-        return ResponseEntity.ok("Product deleted successfully");
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Product Deleted Successfully");
     }
     
     
+    
     @GetMapping("/validate/{id}/{quantity}")
-    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<String> validateProduct(
             @PathVariable Long id,
             @PathVariable Integer quantity) {

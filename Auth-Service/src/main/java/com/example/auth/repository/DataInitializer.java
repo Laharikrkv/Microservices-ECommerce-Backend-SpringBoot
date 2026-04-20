@@ -1,3 +1,4 @@
+
 package com.example.auth.repository;
 
 import java.util.Set;
@@ -54,8 +55,8 @@ public class DataInitializer implements CommandLineRunner {
 
         Role adminRole = createRoleIfNotExists("ADMIN", Set.of(
             readProducts, writeProducts, deleteProducts,
-            readCart, writeCart, readOrders, writeOrders,
-            manageOrders, sendEmail
+            readCart, readOrders, 
+            manageOrders
         ));
 
         // Bootstrap users
